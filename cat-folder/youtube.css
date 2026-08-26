@@ -269,6 +269,11 @@
  cursor:pointer;
 
 }
+.link{
+  font-family:Arial;
+  color:pink;
+  margin-left:100px;
+}
 
 .photo{
   border-radius:20px;
