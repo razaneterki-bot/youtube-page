@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+
+    <button onclick="
+       if(CartQuantity >= 0 && CartQuantity < 10){
+        CartQuantity += 1;
+        console.log(`The current cart quantity is : ${CartQuantity}`);
+       }else if(CartQuantity === 10){
+        alert('The cart is full');
+        }">
+       CartQuantity
+       </button>
+
+
+      <button onclick="
+      if(CartQuantity > 0){
+        CartQuantity -= 1;
+        console.log(`The current cart quantity is : ${CartQuantity}`);
+      }else if(CartQuantity === 0){
+        alert('Not enough items in the cart');
+      }">
+        Remove from cart
+      </button>
+
+
+        
+    
+  </body>
+  <script>
+    let CartQuantity = 0;
+  
+    const name = 'Razane';
+   let hour = '12:00';
+     hour = '10:00';
+   if (hour >= '06:00' && hour <= '12:00'){
+    console.log(`Good morning ${ name }!`);
+   }else if( hour >= '13:00' && hour <= '17:00'){
+    console.log(`Good afternoon ${ name }!`);
+   }else{
+    console.log(`Good night ${ name }!`);
+   }
+   let age = 80;
+   const isHoliday = true;
+   if ((age <= 6 || age >= 65)  && isHoliday){
+    console.log(`You are eligible for a discount !`);
+   }else{
+    console.log(`You are not eligible for a discount `);
+   }
+   
+
+
+
+
+
+   
+  </script>
+</html>

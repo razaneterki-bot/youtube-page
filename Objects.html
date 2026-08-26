@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+  </body>
+  <script>
+     const project ={
+      name:'basketball' ,
+      price:2095
+     }
+     project.price = 2095 + 500 ;
+     project['delivery-time'] = '3 days';
+     console.log(project);
+
+
+     const project1 ={
+      name:'shirt',
+      price:100
+     }
+
+     const project2 ={
+      name:'glasses',
+      price:56
+     }
+
+     function f1 (p1 , p2){
+     if(p1.price < p2.price){
+      return(p1);
+     }else{
+     return(p2);
+     }
+     }
+     console.log(f1(project1 , project2));
+
+
+
+
+     function f2(p1 , p2){
+      if(p1.name === p2.name){
+        if(p1.price === p2.price){
+          console.log('the 2 projects are the same');
+        }else{
+          console.log('the 2 projects are not the same');
+        }
+      }else{
+      console.log('the 2 projects are not the same');
+      }
+     }
+     f2(project1 , project2);
+
+
+
+
+
+     const v1 = 'GOOD MORNING';
+     console.log(v1.toLowerCase());
+     console.log(v1.repeat());
+  </script>
+</html>

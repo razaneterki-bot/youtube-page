@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>exercise</title>
+     <style>
+      
+     </style>
+  </head>
+  <body>
+    
+    <script>
+      /*
+      let j = 1;
+     let withoutEgg = [];
+    function removeEgg(array){
+      console.log(array);
+        const array2 = array.slice();
+        array2.reverse();
+        for(let i = 0; i < array2.length; i++){
+          if(array2[i] === 'egg' && j < 3){
+            j++
+            continue;
+          }
+          withoutEgg.push(array2[i]);
+        }
+        withoutEgg.reverse();
+        console.log(withoutEgg);
+        console.log(array);
+    }
+      
+      removeEgg(['apple' , 'egg','egg' , 'milk' , 'egg' , 'egg' , 'chesse']);
+      
+     */
+    /*
+     for(let i = 1; i <= 20; i++){
+      if(i % 3 === 0 && i % 5 != 0){
+        console.log(`Fizz`);
+        continue;
+      }else if(i % 5 === 0 && i % 3 != 0){
+        console.log(`Buzz`);
+        continue;
+      }else if((i % 3 === 0) && (i % 5 === 0)){
+        console.log(`FizzBuzz`);
+        continue;
+      }
+      console.log(i);
+     }
+      */
+     /*
+     let New = [];
+     function noDouble(array){
+      console.log(array);
+      New.push(array[0]);
+      for(let j = 0; j < array.length; j++){
+        for( let r = 0; r < New.length; r++){
+          if( array[j] === New[r] ){
+              continue;
+            }
+        
+            New.push(array[j]);
+          }
+       
+        }
+        console.log(New);
+      }
+
+       noDouble(['red' , 'green' , 'red' , 'blue' , 'blue']);
+       
+     */
+      
+     /*
+     function searchString (array){
+      let exist = false;
+      for(let i = 0; i < array.length; i++){
+        const elementArray = array[i];
+        if(elementArray === 'search'){
+           console.log(i);
+           exist = true;
+           break;
+        }else{
+          continue;
+        }
+      }  
+      if(exist === false ){
+         console.log(-1);
+      }
+     }
+     searchString([ 'hi' ,'search', 'hello' , 'razane' , 'search']);
+      */
+     function findIndex(array , word){
+      for(let i = 0; i < array.length; i++){
+        const elementArray = array[i];
+        if(elementArray === word){
+          return i;
+        }
+       
+      }  
+       return -1;
+      }
+     
+
+     // findIndex([ 'hi' ,'search', 'hello' , 'razane' , 'search' , 'razane' , 'red'] , 'red');
+    const wd = [];
+     function withoutDouble(array){
+       console.log(array);
+    for(let i = 0; i < array.length; i++){
+      const word = array[i];
+      if (findIndex(wd , word) === -1) {
+          wd.push(word);
+      } 
+    }
+        console.log(wd);
+     }
+      withoutDouble(['green' , 'blue', 'green' , 'red' , 'red' , 'blue']);
+    </script>
+  </body>
+</html>

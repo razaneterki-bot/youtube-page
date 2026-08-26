@@ -1,0 +1,59 @@
+ 
+ p{
+        color:white;
+        font-family:Arial;
+      }
+
+
+      .yes-button ,
+      .no-button{
+        width:50px;
+        height:30px;
+        margin-left:10px;
+        background-color: white;
+        border:none;
+        cursor:pointer;
+      }
+
+      .confirmation{
+        display:inline-block;
+      }
+     .move-button{
+      background-color:transparent;
+      width:120px;
+      height:120px;
+      border-radius:60px;
+      margin-right:10px;
+      border:3px solid white;
+      cursor:pointer;
+     }
+
+     .move-button:active{
+      background-color:lightblue;
+      }
+     
+     .move-photo{
+      width:50px;
+     }
+     .title{
+      font-size:30px;
+      font-weight:bold;
+     }
+     .result{
+      font-size:25px;
+      font-weight:bold;
+     }
+     .reset , .auto-play{
+      background-color: white;
+      border:none;
+      padding:8px 18px;
+      font-size:15px;
+      cursor:pointer;
+     }
+     .js-score{
+      font-family:13px;
+      margin-top:10px;
+     }
+     .game{
+      margin-bottom:60px;
+     }

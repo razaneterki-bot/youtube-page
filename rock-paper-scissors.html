@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Allura&family=Arimo:ital,wght@0,400..700;1,400..700&family=Fjalla+One&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+          
+
+        
+
+
+
+
+
+    <title>Rock Paper Scissors</title>
+    <style>
+      .div{
+        border-style:solid;
+        border-width:2px;
+        height:900px;
+        width:850px;
+        margin-left:850px;
+        margin-top:100px;
+        position:fixed;
+        background-color:white;
+        border-color:rgb(249, 129, 149);
+        border-width:5px;
+        border-radius:10px;
+      }
+      .img1{
+       
+        width: 460px;
+        margin-left:200px;
+        display:block;
+      }
+      p{
+        font-family: Arial;
+        font-weight:bold;
+        font-size:50px;
+        margin-left:100px;
+      }
+      .b1 ,.b2 ,.b3 {
+       background-color:rgb(252, 176, 189);
+       border:none;
+       width:120px;
+       height:60px;
+       margin-top:20px;
+       margin-left:120px;
+       border-radius:20px;
+       font-weight:bold;
+       font-size:23px;
+       cursor:pointer;
+       box-shadow:1px 2px 5px 3px rgb(160, 160, 160);
+      }
+      .b1:active ,.b2:active ,.b3:active , .b4:active{
+        box-shadow:none;
+      }
+      .b1:hover ,.b2:hover ,.b3:hover , .b4:hover{
+        opacity:0.9;
+      }
+      .razane{
+        font-family:Allura , Arial;
+        color:rgb(249, 181, 192);
+        font-size:30px;
+        font-weight:bold;
+        margin:auto 100px auto auto;
+    
+      }
+       
+
+      .b4{
+       background-color:rgb(252, 176, 189);
+       border:none;
+       width:290px;
+       height:80px;
+       margin-top:30px;
+       margin-left:280px;
+       border-radius:20px;
+       font-weight:bold;
+       font-size:23px;
+       cursor:pointer;
+       box-shadow:1px 2px 5px 3px rgb(160, 160, 160);
+      }
+      .js-score{
+        font-family: Arial;
+        font-weight:bold;
+        font-size:30px;
+        margin-left:240px;
+      }
+      .chose-player-computer{
+        font-size:30px;
+        margin-left:120px;
+      }
+      .result-play{
+        
+        font-size:50px;
+        margin-left:310px;
+        margin-top:100px;
+      }
+    </style>
+  </head>
+  <body style="
+  background-color: black;">
+  <p class="razane">By Razène</p>
+    <div class="div">
+
+      <p>Rock Paper Scissors Game</p>
+   <img class="img1" src="rockpaperscissors.jpg">
+
+
+    <button class="b1" onclick="
+      playerMove = 'Rock';
+      computerPlay();
+      function1(playerMove , computerMove);
+      play(playerMove, computerMove);
+      document.querySelector('.chose-player-computer').innerHTML=
+   `You chose ${playerMove} . Computer chose ${computerMove}`;
+ document.querySelector('.result-play').innerHTML =
+    `${result}`;
+
+      ">
+      Rock
+    </button>
+    <button class="b2" onclick="
+      playerMove = 'Paper';
+      computerPlay();
+      function1(playerMove , computerMove);
+      play(playerMove, computerMove);
+     document.querySelector('.chose-player-computer').innerHTML=
+   `You chose ${playerMove} . Computer chose ${computerMove}`;
+ document.querySelector('.result-play').innerHTML =
+    `${result}`;
+      ">
+      Paper
+    </button>
+    <button class="b3" onclick="
+      playerMove = 'Scissors';
+      computerPlay();
+      function1(playerMove , computerMove);
+      play(playerMove, computerMove);
+      document.querySelector('.chose-player-computer').innerHTML=
+   `You chose ${playerMove} . Computer chose ${computerMove}`;
+ document.querySelector('.result-play').innerHTML =
+    `${result}`;
+
+      ">
+      Scissors
+    </button>
+
+    <p class="js-score"></p>
+    <p class="chose-player-computer"></p>
+    <p class="result-play"></p>
+
+     <button  class="b4" onclick="
+     localStorage.removeItem('score');
+     score.Wins = 0;
+     score.Losses = 0;
+     score.Ties = 0;
+     updatescoreElement();
+     ">
+      Reset score
+     </button>
+    </div>
+   
+
+
+    <script>
+  let score = JSON.parse(localStorage.getItem('score'))
+   || {
+    Wins:0,
+    Ties:0,
+    Losses:0
+  };
+   
+   updatescoreElement();
+  
+   
+  let result ='';
+  let playerMove = '';
+  let computerMove ='';
+  
+  console.log(playerMove);
+
+  
+   function computerPlay(){
+    const computer = Math.random ();
+    if( computer >= 0 && computer < (1/3) ){
+      computerMove = 'Rock';
+    } else if( computer >= (1/3) && computer < (2/3)){
+      computerMove = 'Paper';
+    } else if( computer >= (2/3) && computer < 1){
+      computerMove = 'Scissors';
+    }
+   }
+     function function1(parameter1 , parameter2){
+    if(parameter1 === 'Rock'){
+      if(parameter2 === 'Rock'){
+        result = 'Tie 😐';
+      } else if(parameter2 === 'Paper'){
+        result = 'You Lose 😒';
+      } else if (parameter2 === 'Scissors'){
+        result = 'You Win 🤩';
+      }
+    }else if(parameter1 === 'Paper'){
+      if(parameter2 === 'Rock'){
+        result = 'You Win 🤩';
+      } else if(parameter2 === 'Paper'){
+        result = 'Tie 😐';
+      } else if (parameter2 === 'Scissors'){
+        result ='You Lose 😒';
+      } 
+   }else if(parameter1 === 'Scissors'){
+      if(parameter2 === 'Rock'){
+        result = 'You Lose 😒';
+      } else if(parameter2 === 'Paper'){
+        result = 'You Win 🤩';
+      } else if (parameter2 === 'Scissors'){
+        result = 'Tie 😐';
+      }
+   }
+     }
+
+    
+   function play(parameter1 , parameter2){
+       
+
+    if(result === 'You Win 🤩'){
+        score.Wins += 1 ;
+      }else if (result === 'You Lose 😒'){
+        score.Losses += 1 ;
+      }else if(result === 'Tie 😐'){
+        score.Ties += 1 ;
+      }
+
+
+
+     
+   
+
+     
+      localStorage.setItem('score' , JSON.stringify(score));
+       
+     updatescoreElement();
+      
+     
+    if(parameter1 === 'Rock'){
+      if(parameter2 === 'Rock'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}. ${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } else if(parameter2 === 'Paper'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } else if (parameter2 === 'Scissors'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      }
+    }else if(parameter1 === 'Paper'){
+      if(parameter2 === 'Rock'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } else if(parameter2 === 'Paper'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } else if (parameter2 === 'Scissors'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } 
+   }else if(parameter1 === 'Scissors'){
+      if(parameter2 === 'Rock'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+       Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties} `)
+       */
+      } else if(parameter2 === 'Paper'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      } else if (parameter2 === 'Scissors'){
+        /*
+        alert(`You chose ${playerMove}.Computer chose ${computerMove}.${result} !
+        Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`)
+        */
+      }
+   }
+  }
+
+   
+   function updatescoreElement(){
+      
+      document.querySelector('.js-score').innerHTML =
+     `Wins:${score.Wins} , Losses:${score.Losses} , Ties:${score.Ties}`;
+    }
+
+   
+  </script>
+  </body>
+  
+</html>

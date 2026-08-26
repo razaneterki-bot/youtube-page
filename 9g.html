@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .button{
+        background-color: white;
+        border:none;
+        font-size:15px;
+       padding:10px 20px 10px 20px; 
+        
+
+      }
+      .a:hover{
+       color:pink;
+      }
+    </style>
+  </head>
+  <body style="
+  background-color: black;">
+    <input  class="input1" placeholder="Cost of order"
+      onkeydown="
+      enter(event);
+      " >
+      
+      <button  class="button" onclick="
+      calculateTotal();
+      "  >Calculate</button>
+      
+      <a class="a" href="https://www.youtube.com" target="_blank">link to youtube</a>
+      
+      <p class="js-cost"></p>
+   
+      <input class="input2" 
+       onkeyup=" f4();" placeholder="Type something">
+       <p class="p3"></p>
+        <button onclick="
+        calculate += '1'; 
+        calculation(calculate);">1</button>
+        <button onclick="
+        calculate += '2';
+        calculation(calculate);">2</button>
+        <button  onclick="
+        calculate +='3';
+        calculation(calculate);">3</button>
+        <button onclick="
+        calculate +='+';
+        calculation(calculate);">+</button>
+        <button onclick="
+        calculate = eval(calculate);
+        calculation(calculate);
+        "
+        >=</button>
+        <p class="p5"></p>
+        
+        <script>
+        function calculateTotal(){
+
+
+            const costElement = document.querySelector('.input1');
+              let cost = Number(costElement.value);
+              
+                  if(cost < 40){
+                    cost = ((cost * 100) + 1000) / 100;
+                  }
+
+            document.querySelector('.js-cost').innerHTML= `$${cost}`;
+
+            }
+            function enter(ent){
+                  if(ent.key === 'Enter'){
+                calculateTotal();
+              }
+            }
+           function f4(){
+            const box = document.querySelector('.input2');
+             document.querySelector('.p3').innerHTML = box.value;
+           }
+            let calculate ='';
+            function calculation (c){
+            document.querySelector('.p5').innerHTML = `${c}`;
+            }
+        </script>
+  </body>
+</html>

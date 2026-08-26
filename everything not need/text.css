@@ -1,0 +1,74 @@
+.text-youtube{
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 0px;
+  line-height: 24px;
+  width: 400px; 
+}
+.text-views{
+  font-family: Arial;
+  color: rgb(79, 77, 77);
+  margin-top: 10px;
+}
+.Marques-text{
+  font-family: Arial;
+  color: rgb(86, 84, 84);
+  
+}
+.Tahoma{
+  font-family:Tahoma;
+  font-weight: bold;
+  font-size: 18px;
+}
+.Arial {
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 0;
+}
+.italic {
+  font-style: italic;
+  font-family:Arial;
+  font-size:18px;
+  color: rgb(216, 6, 6);
+  margin-top: 4px;
+}
+.css{
+  font-family:Verdana;
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom:0;
+
+}
+.pro{
+  font-family:Verdana;
+  font-size:17px;
+  color: gray;
+  margin-top: 3px;
+}
+.in{
+  font-family:Verdana;
+  font-size:18px;
+  
+  width:330px;
+}
+.get-started{
+  background-color: rgb(2, 157, 2);
+  color: white;
+  border: none;
+  border-radius:6px;
+  height:33px;
+  width:100px;
+  cursor: pointer;
+}
+.get-started:hover{
+  opacity: 0.8;
+}
+.spam{
+  cursor: pointer;
+}
+.spam:hover{
+  text-decoration: underline;
+  color: rgb(241, 242, 243);
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <style>
+      .start-finished-button ,
+      .add-to-card-button{
+        cursor:pointer;
+         display:block;
+         
+      }
+      .add-to-card-button{
+       margin-top:100px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="start-finished-button" onclick="
+       setInterval(function(){
+      const buttonElement = document.querySelector('.start-finished-button');
+      if(buttonElement.innerHTML === 'Start'){
+          buttonElement.innerHTML = 'Loading...';   
+      }else if(buttonElement.innerHTML === 'Loading...'){
+          buttonElement.innerHTML = 'Finished!';   
+      }
+    } , 1000);
+      
+      ">Start</button>
+      <button class="add-to-card-button" onclick="
+      if(!Added){
+       setTimeout(function(){
+            const pElement = document.querySelector('.added');
+            if(pElement.innerHTML === ''){
+              pElement.innerHTML = 'Added';
+            }
+         } , 2000);
+         Added = true ; 
+          
+      }else{
+        clearTimeout();
+        setTimeout(function(){
+            const pElement = document.querySelector('.added');
+            if(pElement.innerHTML === 'Added'){
+              pElement.innerHTML = '';
+            }
+         } , 2000);
+          
+      }
+        
+
+
+    
+      ">Add to card</button>
+      <p class="added"></p>
+      <button class="add-button" onclick="addMessages();">Add</button>
+      <button class="remove-button" onclick="removeMessages();">Remove</button>
+    <script>
+  /*
+      [1 , 2 , 3, 4 ,5].forEach(function(value , i){
+        console.log(`the ${value} is in the position ${i}`);
+      })
+  */
+     
+      let Added = false ;  
+      let  yes = true;
+     const add  = function(){
+      console.log( 2 + 3 );
+    }
+  /*
+    for( let i = 0; i < 3; i++){
+      add();
+    }
+  */
+  /*
+      function runTwice(fun){
+       for( let i = 0; i < 2; i++){
+        fun();
+      }
+      }
+      runTwice(add);
+ */ 
+
+      let message = 2;
+   
+      setInterval(function(){
+        if(message != 0){
+          let {title} = document;
+        if(title === `(${message}) New Messages` || title === !`(${message}) New Messages)`){
+          document.title = 'App';
+        }else{
+          document.title = `(${message}) New Messages`;
+        }
+      }else{
+        document.title = 'App';
+      }
+      }
+        , 1000);
+
+
+      function addMessages(){
+    
+        message += 1;
+       
+      }
+
+
+
+
+
+
+      
+      function removeMessages(){
+      
+        message -= 1 ;
+        
+      
+      }
+     
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    
+    <p>
+  
+      <button onclick="
+      calculate +='1';
+      console.log(`${calculate}`);">1</button>
+    <button onclick="
+    calculate += '2';
+    console.log(`${calculate}`);">2</button>
+    <button onclick="
+    calculate += '3';
+    console.log(`${calculate}`);">3</button>
+     <button onclick="
+      calculate += ' + ';
+      console.log(`${calculate}`);">+</button>
+    </p>
+    <p>
+      <button onclick="
+      calculate +='4';
+      console.log(`${calculate}`);">4</button>
+    <button onclick="
+    calculate += '5';
+    console.log(`${calculate}`);">5</button>
+    <button onclick="
+    calculate += '6';
+    console.log(`${calculate}`);">6</button>
+     <button onclick="
+      calculate += ' - ';
+      console.log(`${calculate}`);">-</button>
+    </p>
+    <p>
+      <button onclick="
+      calculate +='7';
+      console.log(`${calculate}`);">7</button>
+    <button onclick="
+    calculate += '8';
+    console.log(`${calculate}`);">8</button>
+    <button onclick="
+    calculate += '9';
+    console.log(`${calculate}`);">9</button>
+     <button onclick="
+      calculate += ' * ';
+      console.log(`${calculate}`);">x</button>
+    </p>
+    <p>
+      <button onclick="
+      calculate +='0';
+      console.log(`${calculate}`);">0</button>
+      <button onclick="
+     calculate += '.';
+     console.log(`${calculate}`);">.</button>
+     <button onclick="
+    calculate = eval(calculate);
+    console.log(`${calculate}`);
+    localStorage.setItem('calculate2' , calculate);
+    ">=</button>  
+    <button onclick="
+    calculate += ' / ';
+    console.log(`${calculate}`);
+    ">/</button>
+    <button onclick="
+    calculate =''; ">
+      res
+    </button>
+    </p>
+    
+    <button onclick="
+      cost2 -= 1;
+      console.log(`the new cost is : $${cost2}`);">
+      Remove from cart
+      </button>
+   <button onclick="
+    cost2 += 4;
+    console.log(`the new cost is : $${cost2}`);">
+    +4
+    </button>
+  </body>
+  <script>
+    let calculate =localStorage.getItem('calculate2')
+        ||  '';
+    let cost2  =0;
+    const name = 'Razane';
+    console.log(`My name is : ${name}`);
+    const cost = 5 + 3 * 2 + 9 ;
+    console.log(` The cost of food is : $${cost}`);
+    console.log(`The tax is : $${(5 + 3 * 2 + 9) * 0.1}`);
+    console.log(`The total cost is : $${(5 + 3 * 2 + 9) + (5 + 3 * 2 + 9) * 0.1}`);
+
+  </script>
+</html>

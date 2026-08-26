@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>DOM practice</title>
+   <style>
+    .b1{
+      cursor:pointer;
+    }
+   </style>
+  </head>
+  <body>
+  <p>Youtube Subscribe Button</p>
+  <button class="b1" onclick="
+   subscribe();
+  ">Subscribe</button>
+  <p>Amazon Shipping Calculator</p>
+  <input  class="input1" placeholder="Cost of order"
+   onkeydown="
+   enter(event);
+   " >
+  
+   <button onclick="
+   calculateTotal();
+   "  >Calculate</button>
+
+
+   <p class="js-cost"></p>
+    
+  <button class="a9">9a</button>
+  <button class="b9">9b</button>
+
+  <button  onclick="
+  f1('heads');">heads</button>
+
+  <button  onclick="
+  f1('tails');">tails</button>
+
+  <p class="p"></p>
+
+
+
+
+
+  <input class="input2" onkeydown="
+  f3(event);" placeholder="Name">
+  <button class="name-button" onclick="
+  f2();">Submit</button>
+  <p class="p1"></p>
+
+
+
+
+
+
+  <script>
+    function calculateTotal(){
+
+
+     const costElement = document.querySelector('.input1');
+      let cost = Number(costElement.value);
+      
+          if(cost < 40){
+          cost =cost + 10 ;
+          }
+
+     document.querySelector('.js-cost').innerHTML= `$${cost}`;
+
+    }
+    function enter(ent){
+          if(ent.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+
+
+
+
+    function subscribe (){
+      const subs =document.querySelector('button');
+      if(subs.innerHTML === 'Subscribe'){
+          subs.innerHTML = 'Subscribed';
+        }else{
+          subs.innerHTML = 'Subscribe';
+      }
+    }
+
+
+
+
+     console.log(document.querySelector('.a9'));
+
+     const Element9b =document.querySelector('.b9');
+     
+     Element9b.innerHTML = '9b done!';
+   
+
+
+     function f1 (parameter){
+      document.querySelector('.p').innerHTML = `You chose : ${parameter}`;
+     }
+
+     
+    function f2(){
+      const inputElement = document.querySelector('.input2');
+      document.querySelector('.p1').innerHTML = `Your name is :${inputElement.value} `;
+    }
+    function f3(parameter){
+      if(parameter.key === 'Enter'){
+       f2();
+      }
+    }
+  </script>
+  </body>
+</html>

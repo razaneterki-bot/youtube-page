@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>practice flexbox
+   </title>
+   <style>
+    p{
+      font-family:Arial;
+      
+    }
+    .ra{
+      margin-right:170px;
+      
+    }
+     .secondp ,.thirdp{
+      margin-left:8px;
+      margin-top:0;
+      margin-bottom:10px;;
+    }
+    .firstp, .secondp, .thirdp{
+      background-color:rgb(23, 110, 240);
+      color:white;
+      border-radius:18px;
+      font-weight:bold;
+      padding-left:10px;
+      height:22px;
+      padding-top:2px;
+      
+    }
+    .firstp{
+      padding-right:10px;
+      margin-bottom:10px;
+      
+    }
+    .firsts , .firstp{
+      margin-top:10px;
+    }
+    .img{
+      width:50px;
+      height:50px;
+      object-fit:cover;
+      border-radius:50px;
+      margin-top:5px;
+    }
+    .name , .name1{
+      font-weight:bold;
+      margin-right:150px;
+      margin-left:10px;
+      margin-bottom: 0;
+      margin-top:0;
+    }
+     .pop{
+      color:rgb(157, 157, 157);
+      font-size:13px;
+      margin-left:10px;
+      margin-top:5px;
+    }
+    .animal{
+      color:rgb(157 ,157 ,157);
+      font-size: 15px;
+      margin-left:10px;
+      margin-top:5px;
+      margin-bottom: 0;
+    }
+    .button{
+      background-color:rgb(71, 116, 253);
+      color:white;
+      font-weight:bold;
+      font-size:16px;
+      width:75px;
+      border:none;
+      border-radius:5px;
+      height:34px;
+      cursor:pointer;
+      
+    } 
+    .container1 , .container2 , .container3{
+      margin-left:100px;
+      margin-top:100px;
+      
+    } 
+    
+    .b{
+      margin-top:10px;
+    } 
+    
+    .container1{
+    margin-bottom:0;
+    margin-left:0;
+    
+    }
+    .container2{
+      margin-top:5px;
+      margin-bottom:0;
+      margin-left:0;
+    }
+    .container3{
+      margin-top:5px;
+      margin-left:0px;
+    }
+    .razane{
+      margin-left:0px;
+      margin-top:0px;
+      vertical-align: top;
+      margin-bottom:100px;
+    }
+    .name1{
+      margin-right:153.5px;
+    }
+    
+    .p{
+      color:white;
+      font-weight:bold;
+      margin-left:10px;
+    }
+    .sis{
+      height:30px;
+      width:220%;
+      border-radius:16px;
+      border-style:solid;
+      border:none;
+      margin-left:80px;
+      padding-left:20px;
+    }
+    .buttonn{
+      background-color: blueviolet;
+      border-color:white;
+      border-width:1px;
+      border-style:solid;
+      height:30px;
+      width:100px;
+      font-weight:bold;
+      color:white;
+      margin-left:490px;
+      border-radius:2px;
+      margin-right:5px;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+   </style>
+  </head>
+  <body>
+    <div style="
+      display:flex;
+      flex-direction: row;
+      border-width:1px;
+      border-color:gray;
+      border-style:solid;
+      height:70px;
+      justify-content:space-between;
+      align-items:center;">
+      
+    
+      <div style="
+      background-color:lightpink;
+      width:100px;
+
+      ">100px;
+      </div>
+      <div style="background-color:lightblue;
+      width:100px;">100px</div>
+    </div>
+
+
+      <div style="
+      display:flex;
+      flex-direction:row;">
+      
+      <div style="
+      background-color:lightblue;
+      width:200px;">200px</div>
+      <div style="
+      background-color:lightpink;
+      width:75px;">75px</div>
+      </div>
+      <div style="
+      display:flex;
+      flex-direction:row;
+      border-style:solid;
+      border-width:1;">
+
+      <div style="background-color:lightpink;
+      width:50px;">
+      item1
+      </div>
+      <div style="background-color:lightblue;
+      flex:1;">
+      item2
+      </div>
+      <div style="background-color:lightpink;
+      width:75px;">
+      item3
+      </div>
+
+      </div>
+    
+    
+    
+     <div style="
+     display:flex;
+     flex-direction:row;
+     border-style:solid;
+     border-width:1px;
+     width:305px;
+     padding-left:10px;
+     border-radius:5px;
+     margin-top:10px;
+     height:109px;
+     
+
+     
+     
+     
+     
+     border-color:rgb(177, 174, 174);">
+     <div class="ra">
+      <p class="firsts">Home</p>
+      <p class="seconds">Notifications</p>
+      <p class="thirds">Messages</p>
+     </div>
+      
+     <div class="rz">
+
+      <p class="firstp">14</p>
+      <p class="secondp">3</p>
+      <p class="thirdp">5</p>
+     </div>
+     </div>
+     <div class="razane">
+
+      <div class="container1">
+      <div style="
+        display:flex;
+        flex-direction:row;">
+        
+        <div>
+          <img class="img" src="cat-photo.jpg">
+        </div>
+      
+      <div class="paragraph">
+        <p class="name1">oliver</p>
+        <p class="animal">the cat</p>
+        <p class="pop">Popular</p>
+      </div>
+      
+        <div class="b">
+          <button class="button">Follow</button>
+        </div>
+        
+        </div>
+    </div>
+    
+
+
+    <div class="container2">
+      <div style="
+        display:flex;
+        flex-direction:row;">
+      <div>
+        <img class="img" src="cat-orange.jpg">
+      </div>
+      <div class="paragraph">
+        <p class="name1">bicho</p>
+        <p class="animal">the cat</p>
+        <p class="pop">Popular</p>
+      </div>
+       <div class="b">
+        <button class="button">Follow</button>
+       </div>
+        
+        </div>
+     
+    </div>
+
+
+    <div class="container3">
+      <div style="
+        display:flex;
+        flex-direction:row;">
+      <div>
+        <img class="img" src="cat-gray.jpg">
+      </div>
+      <div class="paragraph">
+        <p class="name">bniwn</p>
+        <p class="animal">the cat</p>
+        <p class="pop">Popular</p>
+      </div>
+      <div class="b">
+        <button class="button">Follow</button>
+      </div>
+        
+        </div>
+     
+      </div>
+     </div>
+     
+
+
+
+
+
+
+
+
+
+
+     <div style="
+     display:flex;
+     flex-direction:row;
+     margin-right:2000px;
+     background-color:blueviolet;
+     width:900px;
+     align-items:center;">
+
+     <div class="p">
+      <p class="para">Home</p>
+     </div>
+     <div class="s">
+      <input  class="sis" type="text" placeholder="Search">
+     </div>
+     <div class="br">
+      <button class="buttonn">Download</button>
+     </div>
+     </div>
+    
+    
+  </body>
+</html>

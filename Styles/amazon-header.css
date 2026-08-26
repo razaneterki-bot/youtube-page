@@ -1,0 +1,196 @@
+ @media(max-width:500px){
+  .search-box{
+       flex:1;
+      }
+  .amazon-photo, .R , .O , .C , .cart-photo ,.quantity{
+      display:none;
+    }
+    .amazon:hover , .b2:hover{
+      display:none;
+      cursor:none;
+      pointer-events: none;
+    }
+    .amazon{
+      margin-left:0px;
+      width:40px;
+    }
+    .amazon-logo , .burger{
+      display:block;
+    }
+    
+}
+ 
+ 
+ 
+ .head-of-amazon{
+        background-color: rgb(19, 25, 33);
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        height:62px;
+        position:fixed;
+        left:0;
+        right:0;
+        top:0;
+        
+      }
+      .center-header{
+        flex:1;
+        display:flex;
+        flex-direction:row;
+      }
+      .left-header{
+        width:200px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right-header{
+        width:220px;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .amazon-photo{
+        width:110px;
+        object-fit:contain;
+        margin-left:0px;
+        margin-top:8px;
+      }
+      .amazon{
+        background-color:transparent;
+        border:none;
+        width:120px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:55px;
+        margin-left:-20px;
+        cursor: pointer;
+        border-radius: 2px;
+
+      }
+      .amazon:hover{
+       border-color:white;
+       border-width:1px;
+       border-style:solid;
+      }
+      .search-box{
+        height:38px;
+        padding-left:15px;
+        font-size:16px;
+        border:none;
+        border-top-left-radius:4px;
+        border-bottom-left-radius:4px; 
+        width:0;
+        flex:1;
+        margin-top:2px;
+        
+       
+      }
+      .button-search{
+        background-color: rgb(251, 201, 109);
+        width:47px;
+        height:40px;
+        border:none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius:4px;
+        cursor:pointer;
+        flex-shrink: 0;
+        margin-top:2px;
+      }
+      .search-icon-photo{
+        width:23px;
+        padding-top:4px;
+      }
+      p{
+        font-family:Roboto , Arial ;
+        
+      }
+      .b1{
+        display:flex;
+        border:none;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        width:70px;
+        height:49px;
+        border-radius:2px;
+        cursor:pointer;
+      }
+      
+      .R{
+        font-size:13px;
+        color:white;
+        margin-bottom:0;
+        margin-top:13px;
+        margin-left:-20px;
+       
+      }
+      .O{
+        font-size:15px;
+        color:white;
+        margin-top:0;
+        font-weight:900;
+        margin-left:-6px;
+       
+      }
+
+      .b2{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:95px;
+        height:49px;
+        border-radius:2px;
+        border:none;
+        cursor:pointer;
+        margin-left:-1px;
+      }
+      .b2 , .b1{
+        background-color: transparent;
+      }
+     
+      .b1:hover ,.b2:hover{
+        border-color:white;
+        border-width:1px;
+        border-style:solid;
+      }
+      .cart-photo{
+        width:48px;
+        height:35px;
+
+      }
+      .C{
+       font-size:15px;
+       color:white;
+       font-weight:bold;
+       margin-top:25px;
+       margin-left:0;
+       
+      }
+      .quantity{
+        position:absolute;
+        color:rgb(255, 132, 0);
+        font-size:15px;
+        font-weight:bold;
+        margin-top:0px;
+        margin-left:-21px;
+        
+      }
+      .amazon-logo{
+       max-width:100%;
+       object-fit:contain;
+        width:36px;
+        margin-top:7px;
+        display:none;
+      }
+      .burger{
+     
+       display:none;
+       width:25px;
+       margin-top:0px;
+      }
+      

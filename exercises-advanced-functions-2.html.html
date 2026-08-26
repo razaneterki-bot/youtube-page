@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <style>
+     
+    </style>
+  </head>
+  <body>
+  
+    <script>
+        const multipy = (num1 , num2) => num1 * num2 ;
+        console.log(multipy(2 , 2));
+        console.log(multipy(70 , 2));
+
+
+
+        const countPositive = (array) => {
+          let num = 0 ;
+         array.forEach(value => {
+           if( value > 0){
+             num++
+           }
+         })
+           return num ;
+        };
+
+        console.log(countPositive([1, -2, 5, 7, -10, 2, -4, -6]));
+
+
+
+
+
+
+        const addNum = (array , num) => {
+        console.log(array.map( value => value + num ))};
+        addNum([1, 2, 3] , 50);
+
+
+
+        const removeEgg = (array) => {
+          let i = 0 ;
+        console.log(
+          array.filter(value => {
+          if(value === 'egg' && i < 2){
+           i++;
+           return false ; 
+          }else{
+            return true ; 
+          }
+         })
+        ) 
+        }
+        const removeEgg1 = (array) => {
+        console.log(
+          array.filter(value => {
+          return value != 'egg' ;
+         })
+        ) 
+        }
+        removeEgg(['egg' , 'apple' , 'banana' , 'milk' , 'egg' , 'cake' , 'egg']);
+    </script>
+  </body>
+</html>
